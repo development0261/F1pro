@@ -30,6 +30,8 @@ import ClockInOut from './components/ClockInOut';
 import Help from './components/Help';
 import LogOut from './components/LogOut';
 import Login from './components/Login';
+import ForgotPassword from './components/ForgotPassword';
+
 const routes = [
 	{
 		path: '/',
@@ -130,6 +132,10 @@ const routes = [
 	{
 		path: '/Login',
 		component : Login
+	},
+	{
+		path: '/ForgotPassword',
+		component : ForgotPassword
 	},
 ];
 const router = new VueRouter({

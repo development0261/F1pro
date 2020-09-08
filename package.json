@@ -24,8 +24,7 @@
     "sass-loader": "^8.0.0",
     "vue-cli-plugin-vuetify": "~2.0.7",
     "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.3.0",
-    "oriental_deign": "file:E:\\Create_app_vue_js\\oriental_deign"
+    "vuetify-loader": "^1.3.0"
   },
   "eslintConfig": {
     "root": true,
