@@ -33,7 +33,7 @@
                                    <li>
                                       <a href="javascript:void(0)" v-on:click="menu2_active_state = !menu2_active_state"><img src="../assets/tean-icon.png" alt=""><span>Team</span><i class="fa fa-caret-down"></i></a>
                                       <ul v-bind:class="{ 'active': menu2_active_state }">
-                                         <li><a href="/#/Search"><img src="../assets/search-icon.png" alt="search-icon"><span>Search</span></a></li>
+                                         <li><a href="/#/TeamMember"><img src="../assets/search-icon.png" alt="search-icon"><span>Search</span></a></li>
                                          <li><a href="/#/Payroll"><img src="../assets/payroll-icon.png" alt=""><span>Payroll</span></a></li>
                                          <li><a href="/#/Training"><img src="../assets/training-icon.png" alt="reports-icon"><span>Training</span></a></li>
                                          <li><a href="/#/Reports"><img src="../assets/reports-icon.png" alt="reports-icon"><span>Reports</span></a></li>

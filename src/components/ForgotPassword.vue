@@ -8,7 +8,7 @@
                      <v-col cols="6" class="pt-0 pb-0">
                         <div class="header">
                           <div class="header-left">
-                             <div class="header-logo-demo">
+                             <div class="header-logo-demo-forgot-password">
                                 <router-link to="/">
                                    <v-img
                                       :src="require('../assets/main_logo.png')"
@@ -19,24 +19,21 @@
                                    </v-img>
                                 </router-link>
                                 
-                                <v-container class="Login_responsive login_container_css">
-                                  <p class="login_text_css">Log In</p>
-                                  <div class="space"></div>
-                                  <input class="username_css" type="text" name="name" placeholder="Username" autocomplete="off">
-                                  <div class="space_class"></div>
-                                  <input class="username_css" type="password" name="password" placeholder="Password" autocomplete="off">
+                                <v-container class="Login_responsive forgot_password_container_css">
+                                  <p class="login_text_css">FORGOT PASSWORD</p>
+                                  <div class="space_btn"></div>
+                                  <input class="username_css" type="text" name="name" placeholder="Username / Email" autocomplete="off">
                                 </v-container>
                              </div>
                           </div>
                         </div>
-                        <router-link to="ForgotPassword">
-                          <p class="forgot_password_css">FORGOT PASSWORD?</p> 
-                        </router-link>
+                        <div class="space_btn"></div>
 
-                        <div class="header-add-login">
-                          <a><button class="header-add-login">Log In</button></a>
+                        <div class="header-add-forgot-password">
+                          <a href="javascript:void(0)"><button class="header-add-forgot-password-btn"><span>Submit</span></button></a>
                         </div>
 
+                        <div class="space_btn"></div>
                         <template>
                           <v-footer padless class="main-footer">
                             <v-col
@@ -87,13 +84,13 @@ export default {
 
 .v-responsive__content .main_logo
 {
-  width: 0px !important;
-}
-.space
-{
-  padding: 22px;
+  width: 0px;
 }
 
+.space_btn
+{
+  padding: 15px;
+}
 .forgot_password_css
 {
   margin-left: 55%;
@@ -102,9 +99,8 @@ export default {
   font-weight: normal;
   color: #0157A0;
 }
-.header-logo-demo
+.header-logo-demo-forgot-password
 {
-    margin-left: 40px;
     padding: 40px 0 !important;
 }
 .login_text_css
@@ -130,9 +126,9 @@ export default {
 {
   margin-bottom: 42px;
 }*/
-.login_container_css
+.forgot_password_container_css
 {
-  margin-left: 50%;
+  margin-left: 40%;
   margin-top: 88px;
 }
 .container--fluid
@@ -140,11 +136,15 @@ export default {
   margin-bottom:0px !important;
 }
 
-.header-add-login {
-  margin-left: 15%;
+.header-add-forgot-password-btn
+{
+  width: 80%;
+}
+.header-add-forgot-password {
+  margin-left: 21%;
   width: 67%;
 }
-.header-add-login a {
+.header-add-forgot-password a {
     font-weight: 500;
     font-size: 15px;
     line-height: 22px;
@@ -154,16 +154,15 @@ export default {
     padding: 12px 35px;
     border-radius: 60px;
 }
-.header-logo-demo .v-responsive__content{
-  width: 0px !important;
-}
+
+
 @media (max-width: 500px)
 {
   .login_view
   {
     display: none;
   }
-  .header-logo-demo
+  .header-logo-demo-forgot-password
   {
     margin-left:0px;
   }

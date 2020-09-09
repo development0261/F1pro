@@ -30,6 +30,11 @@ import ClockInOut from './components/ClockInOut';
 import Help from './components/Help';
 import LogOut from './components/LogOut';
 import Login from './components/Login';
+import ForgotPassword from './components/ForgotPassword';
+import Division from './components/Division';
+import TeamMember from './components/TeamMember';
+import EmployeeMain from './components/EmployeeMain';
+
 const routes = [
 	{
 		path: '/',
@@ -130,6 +135,22 @@ const routes = [
 	{
 		path: '/Login',
 		component : Login
+	},
+	{
+		path: '/ForgotPassword',
+		component : ForgotPassword
+	},
+	{
+		path: '/Division',
+		component : Division
+	},
+	{
+		path: '/TeamMember',
+		component : TeamMember
+	},
+	{
+		path: '/EmployeeMain',
+		component : EmployeeMain
 	},
 ];
 const router = new VueRouter({
