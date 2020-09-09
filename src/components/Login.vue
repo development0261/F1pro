@@ -35,10 +35,7 @@
 
                         <div class="header-add-login">
                           <a><button class="header-add-login">Log In</button></a>
-<<<<<<< HEAD
-=======
-                          
->>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
+
                         </div>
 
                         <template>
