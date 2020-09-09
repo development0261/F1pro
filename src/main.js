@@ -31,9 +31,12 @@ import Help from './components/Help';
 import LogOut from './components/LogOut';
 import Login from './components/Login';
 import ForgotPassword from './components/ForgotPassword';
+<<<<<<< HEAD
 import Division from './components/Division';
 import TeamMember from './components/TeamMember';
 import EmployeeMain from './components/EmployeeMain';
+=======
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
 
 const routes = [
 	{
@@ -140,6 +143,7 @@ const routes = [
 		path: '/ForgotPassword',
 		component : ForgotPassword
 	},
+<<<<<<< HEAD
 	{
 		path: '/Division',
 		component : Division
@@ -152,6 +156,8 @@ const routes = [
 		path: '/EmployeeMain',
 		component : EmployeeMain
 	},
+=======
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
 ];
 const router = new VueRouter({
 	routes

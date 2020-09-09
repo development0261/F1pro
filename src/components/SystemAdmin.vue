@@ -9,13 +9,18 @@
 
          <v-col cols="6">
             <div>
+<<<<<<< HEAD
                <!-- <h1 class="text-right System_admin_text">1601</h1> -->
+=======
+               <h1 class="text-right System_admin_text">1601</h1>
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
             </div>
          </v-col>
       </v-row>
 
       <v-row class="row">
           <v-col col="6" class="main_bar_text">Master Files</v-col>
+<<<<<<< HEAD
           <v-col col="6" class="main_bar_text_left">System Setup</v-col>
       </v-row>
 
@@ -27,6 +32,19 @@
       <v-row class="customer-search-wrap">
          <v-col cols="5" class="table_border_css">
            <a href="#/Division" class="text-color-css"><span class="text-css">Divisions</span></a>
+=======
+          <v-col col="6" class="main_bar_text">System Setup</v-col>
+      </v-row>
+
+      <v-row class="row main_bar">
+          <v-col col="6" class="text-css main_header_css">File name</v-col>
+          <v-col col="6" class="text-css main_header_css_left"><span style="margin-left: -17px;">File name</span></v-col>
+      </v-row>
+
+      <v-row class="customer-search-wrap">
+         <v-col cols="5" class="table_border_css">
+           <span class="text-css">Divisions</span>
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
          </v-col>
          <v-col cols="1"></v-col>
          <v-col cols="6" class="table_border_css_left"><span class="text-css">Users</span></v-col>
@@ -38,7 +56,11 @@
          </v-col>
          <v-col cols="1"></v-col>
          <v-col cols="6" class="table_border_css_left">
+<<<<<<< HEAD
             <span class="text-css">User Access Profiles</span>
+=======
+            <span class="text-css">Preferences</span>
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
          </v-col>
       </v-row>
 
@@ -48,7 +70,11 @@
          </v-col>
          <v-col cols="1"></v-col>
          <v-col cols="6" class="table_border_css_left">
+<<<<<<< HEAD
             <span class="text-css">Preferences</span>
+=======
+            <span class="text-css">Media Library</span>
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
          </v-col>
       </v-row>
 
@@ -58,8 +84,12 @@
          </v-col>
          <v-col cols="1"></v-col>
          <v-col cols="6" class="table_border_css_left">
+<<<<<<< HEAD
             <span class="text-css">Media Library</span>
             
+=======
+            <span class="text-css">Campaigns</span>
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
          </v-col>
       </v-row>
 
@@ -69,8 +99,12 @@
          </v-col>
          <v-col cols="1"></v-col>
          <v-col cols="6" class="table_border_css_left">
+<<<<<<< HEAD
             <span class="text-css">Campaigns</span>
             
+=======
+            <span class="text-css">Warranty Certificates</span>
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
          </v-col>
       </v-row>
 
@@ -80,8 +114,12 @@
          </v-col>
          <v-col cols="1"></v-col>
          <v-col cols="6" class="table_border_css_left">
+<<<<<<< HEAD
             <span class="text-css">Warranty Certificates</span>
             
+=======
+            <span class="text-css">System Communications</span>
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
          </v-col>
       </v-row>
 
@@ -91,8 +129,12 @@
          </v-col>
          <v-col cols="1"></v-col>
          <v-col cols="6" class="table_border_css_left">
+<<<<<<< HEAD
             <span class="text-css">System Communications</span>
             
+=======
+            <span class="text-css">Holidays</span>
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
          </v-col>
       </v-row>
 
@@ -101,10 +143,14 @@
            <span class="text-css">BOM</span>
          </v-col>
          <v-col cols="1"></v-col>
+<<<<<<< HEAD
          <v-col cols="6" class="table_border_css_left">
            <span class="text-css">Holidays</span>
          </v-col>
 
+=======
+         <v-col cols="6"></v-col>
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
       </v-row>
 
       <v-row class="customer-search-wrap">
@@ -269,6 +315,7 @@
          <v-col cols="6"></v-col>
       </v-row>
 
+<<<<<<< HEAD
       <v-row>
           <v-col cols="6"></v-col>
           <v-col cols="4"></v-col>
@@ -278,6 +325,9 @@
             </div>
           </v-col>
       </v-row>
+=======
+
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
 
    </v-container>
 </template>
@@ -285,6 +335,18 @@
    export default {
      data () {
        return {
+<<<<<<< HEAD
+=======
+         headers: [
+           
+           { text: 'Last Name', value: 'LastName' },
+           { text: 'Address', value: 'Address' },
+           { text: 'City', value: 'City' },
+           { text: 'Zip', value: 'Zip' },
+           { text: 'Email', value: 'Email' },
+           { text: 'Phone', value: 'Phone' },
+         ],
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
         
        }
      },
@@ -308,10 +370,15 @@
 }
 .main_bar_text
 {
+<<<<<<< HEAD
+=======
+    text-align: center;
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
     font-size: 23px;
+<<<<<<< HEAD
     padding-left: 8%;
 }
 
@@ -322,6 +389,8 @@
     font-weight: normal;
     font-size: 23px;
     margin-left: -35px;
+=======
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
 }
 .table_border_css
 {
@@ -329,7 +398,10 @@
     border: 1px solid rgba(196, 196, 196, 0.37);
     border-radius: 4px;
     height: 50px;
+<<<<<<< HEAD
     cursor: pointer;
+=======
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
 }
 
 .table_border_css_left
@@ -342,12 +414,19 @@
 .text-css
 {
   line-height: 48px;
+<<<<<<< HEAD
   cursor: pointer;
 }
+=======
+}
+
+
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
 .main_header_css
 {
   padding-left: 8%;
 }
+<<<<<<< HEAD
 
 .header-add-systemAdmin {
     max-width: 140px;
@@ -366,4 +445,6 @@
 {
   color: rgba(0, 0, 0, 0.87) !important;
 }
+=======
+>>>>>>> 3d636cb80ab682d41cba6dc9b1f3a6e40b5bd107
 </style>
