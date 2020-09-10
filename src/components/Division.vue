@@ -21,10 +21,10 @@
 
      <v-row class="main_bar">
           <v-col col="3">
-            first
+            Division
           </v-col>
           <v-col col="9">
-            second
+            Div Description
           </v-col>
       </v-row> 
 

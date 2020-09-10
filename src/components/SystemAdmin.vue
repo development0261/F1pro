@@ -18,20 +18,7 @@
 
       <v-row class="row">
           <v-col col="6" class="main_bar_text">Master Files</v-col>
-
           <v-col col="6" class="main_bar_text_left">System Setup</v-col>
-      </v-row>
-
-     <!--  <v-row class="row main_bar">
-          <v-col col="6" class="text-css main_header_css">File name</v-col>
-          <v-col col="6" class="text-css main_header_css_left"><span style="margin-left: -17px;">File name</span></v-col>
-      </v-row> -->
-
-      <v-row class="customer-search-wrap">
-         <v-col cols="5" class="table_border_css">
-           <a href="#/Division" class="text-color-css"><span class="text-css">Divisions</span></a>
-
-          <v-col col="6" class="main_bar_text">System Setup</v-col>
       </v-row>
 
       <v-row class="row main_bar">
@@ -39,9 +26,10 @@
           <v-col col="6" class="text-css main_header_css_left"><span style="margin-left: -17px;">File name</span></v-col>
       </v-row>
 
+
       <v-row class="customer-search-wrap">
          <v-col cols="5" class="table_border_css">
-           <span class="text-css">Divisions</span>
+           <a href="#/Division" class="text-color-css"><span class="text-css">Divisions</span></a>
 
          </v-col>
          <v-col cols="1"></v-col>
@@ -328,8 +316,6 @@
    export default {
      data () {
        return {
-
-
          headers: [
            
            { text: 'Last Name', value: 'LastName' },
@@ -338,9 +324,7 @@
            { text: 'Zip', value: 'Zip' },
            { text: 'Email', value: 'Email' },
            { text: 'Phone', value: 'Phone' },
-         ],
-
-        
+         ],        
        }
      },
     
@@ -363,14 +347,10 @@
 }
 .main_bar_text
 {
-
-    text-align: center;
-
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
     font-size: 23px;
-
     padding-left: 8%;
 }
 
@@ -381,8 +361,6 @@
     font-weight: normal;
     font-size: 23px;
     margin-left: -35px;
-
-
 }
 .table_border_css
 {
@@ -390,10 +368,7 @@
     border: 1px solid rgba(196, 196, 196, 0.37);
     border-radius: 4px;
     height: 50px;
-
     cursor: pointer;
-
-
 }
 
 .table_border_css_left
@@ -406,20 +381,13 @@
 .text-css
 {
   line-height: 48px;
-
   cursor: pointer;
 }
-
-}
-
-
 
 .main_header_css
 {
   padding-left: 8%;
 }
-
-
 .header-add-systemAdmin {
     max-width: 140px;
 }

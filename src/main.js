@@ -31,7 +31,6 @@ import Help from './components/Help';
 import LogOut from './components/LogOut';
 import Login from './components/Login';
 import ForgotPassword from './components/ForgotPassword';
-<<<<<<< HEAD
 import Division from './components/Division';
 import TeamMember from './components/TeamMember';
 import EmployeeMain from './components/EmployeeMain';
