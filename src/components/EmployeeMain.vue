@@ -1,7 +1,7 @@
 <template>
     <v-container class="customer-detail-main">
         <v-row class="pt-15 tab-wrap mr-0 ml-0">
-            <v-col cols="12" style="margin-left: -17%;">
+            <v-col cols="12" class="emp_main_nav_bar">
                 <div class="tab-wrap">
                     <v-bottom-navigation :value="activeBtn" class="tab-wrap-menu">
                         <v-btn @click="change_step(1)">Employee Details</v-btn>
@@ -41,19 +41,16 @@
                                                  <v-img
                                                     :src="require('../assets/user.png')"
                                                     contain
-                                                    height="200px"
                                                     width="150px"
                                                     class="img-class"
                                                     >
                                                  </v-img>
-                                                 <v-img
+                                                 <!-- <v-img
                                                     :src="require('../assets/pencil.png')"
                                                     contain
-                                                    height="200px"
-                                                    width="150px"
                                                     class="pencil-icon"
                                                     >
-                                                 </v-img>
+                                                 </v-img> -->
                                                </div>
                                               </v-col>
                                               <v-col
@@ -301,37 +298,151 @@
                     </div>
                 </div>
                 <div class="customer-evaluation-step text-center" v-if="current_step == 2">
-                    <h1>Evaluation</h1>
+                    <template>
+                       <v-container>
+                          <v-row class="customer-search-wrap">
+                             <v-col cols="12" md="4">
+                                <v-text-field
+                                   label="Regular"
+                                   class="search"
+                                   append-icon="mdi-magnify"
+                                   ></v-text-field>
+                             </v-col>
+                             <v-col cols="12" class="customer-search-table">
+                                <v-data-table
+                                   :headers="headers_new"
+                                   :items="desserts_new"
+                                   class="elevation-1 cursor-pointer"
+                                   @click:row="customerDetail"
+                                   ></v-data-table>
+                             </v-col>
+                          </v-row>
+                       </v-container>
+                    </template>
                 </div>
                 <div class="customer-bids-step text-center" v-if="current_step == 3">
-                    <h1>Bids</h1>
+                    <template>
+  <v-container class="division_bar">
+      <v-row>
+
+         <v-col cols="6">
+               <h1 class="System_admin_text_division">Traning Record</h1>
+         </v-col>
+
+         <v-col cols="1"></v-col>
+
+         <v-col cols="2"></v-col>
+
+         <v-col cols="3">
+            <div class="header-add-division">
+              <a href="/"><span><i class="fa fa-download" aria-hidden="true"></i> Export</span></a>
+            </div>
+         </v-col>
+      </v-row>
+
+     <v-row class="main_bar">
+          <v-col cols="3" class="md-3" style="line-height: 35px;">
+            <span >Division</span>
+          </v-col>
+          <v-col cols="9" class="md-3" style="line-height: 35px;">
+            <span>Div Description</span>
+          </v-col>
+      </v-row> 
+
+      <v-row>
+          <v-col cols="3" class="md-3">
+             <v-text-field
+               class="search" 
+               autocomplete="off"
+               ></v-text-field>
+          </v-col>
+
+          <v-col cols="3" class="md-3">
+             <v-text-field
+               class="search"
+               autocomplete="off"
+               ></v-text-field>
+          </v-col>
+
+      </v-row> 
+      <br>
+      <v-row class="customer-search-wrap">
+         <v-col cols="3" class="table_border_css_division">
+           <span class="text-css">FRWP</span>
+         </v-col>
+         <v-col cols="5" class="table_border_css_left"><span class="text-css">Foundation Repair / Waterproofing</span></v-col>
+
+         <v-col cols="4" class="table_border_css_left"><span class="text-css"><strong>DivisionsMaster</strong></span></v-col>
+      </v-row>
+
+      <v-row class="customer-search-wrap">
+         <v-col cols="3" class="table_border_css_division">
+           <span class="text-css">CN</span>
+         </v-col>
+         <v-col cols="9" class="table_border_css_left"><span class="text-css">Concrete</span></v-col>
+      </v-row>
+
+      <v-row class="customer-search-wrap">
+         <v-col cols="3" class="table_border_css_division">
+           <span class="text-css">MJ</span>
+         </v-col>
+         <v-col cols="9" class="table_border_css_left"><span class="text-css">Mudjacking</span></v-col>
+      </v-row>
+
+      <v-row class="customer-search-wrap">
+         <v-col cols="3" class="table_border_css_division">
+           <span class="text-css">HS</span>
+         </v-col>
+         <v-col cols="9" class="table_border_css_left"><span class="text-css">Hardscapes</span></v-col>
+      </v-row>
+
+      <v-row class="btn_css">
+          <v-col cols="6"></v-col>
+          <v-col cols="4"></v-col>
+          <v-col cols="2">
+            <div class="header-add-systemAdmin">
+              <a href="#/SystemAdmin"><span>Back</span></a>
+            </div>
+          </v-col>
+      </v-row>
+  </v-container>
+</template>
+
+
                 </div>
+
+                <!--cCompenstation-->
                 <div class="customer-activity-step" v-if="current_step == 4">
                     <v-row>
-                    <v-col cols="6">
-                      <h1 class="text-center text_css_compenstation">Compenstation</h1>
+                      <v-col cols="1"></v-col>
+                      <v-col cols="10">
                         <v-row>
-                            <v-col cols="4" class="" style="margin-left: 35%;">
-                                <v-img
-                                  :src="require('../assets/user.png')"
-                                  contain
-                                  height="200px"
-                                  width="150px"
-                                  class="img-class"
-                                  >
-                               </v-img>
-                            </v-col>
-                           <v-col cols="4" class=""></v-col>
-                           <v-col cols="4" class=""></v-col>
-                        </v-row>
-                    </v-col>
+                          <v-col cols="3">
+                            <h1 class="text_css_compenstation">Compenstation</h1>
+                              <v-row>
+                                 <div class="user-profile">
+                                   <v-img
+                                      :src="require('../assets/user.png')"
+                                      contain
+                                      height="200px"
+                                      width="150px"
+                                      class="img-class"
+                                      >
+                                   </v-img>
+                                 </div>
+                              </v-row>
+                          </v-col>
 
-                    <v-col cols="6">
-                        <div class="user-bio">
-                          <span><p>Nickname:<span><strong> Nicole</strong></span></p></span>
-                          <span><p>Full Name:<span><strong> Nicole Linebach</strong></span></p></span>
-                        </div>
-                    </v-col>
+                          <v-col cols="9">
+                            <div class="user-bio">
+                              <span class="text_nickname_css"><p>Nickname:<span><strong class="ans_css">     Nicole</strong></span></p></span>
+                              <span class="text_nickname_css"><p>Full Name:<span><strong class="ans_css">    Nicole Linebach</strong></span></p></span>
+                            </div>
+                            <span class="text_nickname_css"><p class="ss_Css">SS#:<span><strong class="ans_css">  096745</strong></span></p></span>
+                          </v-col>
+                        </v-row>
+                      </v-col>
+                      <v-col cols="1"></v-col>
                     </v-row>
 
                     <v-row>
@@ -339,18 +450,15 @@
                       <v-col cols="10">
                         <template>
                            <v-container>
-                              <v-row class="sc-title mt-7">
-                                 <v-col cols="10" class="offset-md-1"></v-col>
-                              </v-row>
-                              <v-row class="customer-search-wrap pt-5 pb-5">
-                                 <v-col cols="10" md="4" class="pt-0 pb-0 offset-md-1">
+                              <v-row class="customer-search-wrap">
+                                 <v-col cols="12" md="4" class="pt-0 pb-0">
                                     <v-text-field
                                        label="Regular"
                                        class="search"
                                        append-icon="mdi-magnify"
                                        ></v-text-field>
                                  </v-col>
-                                 <v-col cols="10" class="customer-search-table offset-md-1">
+                                 <v-col cols="12" class="customer-search-table">
                                     <v-data-table
                                        :headers="headers"
                                        :items="desserts"
@@ -363,11 +471,139 @@
                       </v-col>
                       <v-col cols="1"></v-col>
                     </v-row>
+                </div>
 
-                </div>
+
+                <!--Time Off-->
                 <div class="customer-insights-step text-center" v-if="current_step == 5">
-                    <h1>Insights</h1>
+                    <v-row>
+                      <h1 style="margin-left: 7%;">Time Off</h1>
+                    </v-row>
+
+                    <v-row>
+                        <div class="container main_row_employeemain">
+                          <v-row>
+                              <v-col cols="4">
+                                <span class="text-left custome_class"><p>Nickname:<span><strong>Nicole</strong></span></p></span>
+                              </v-col>
+
+                              <v-col cols="4">
+                                <span class="text-left custome_class"><p>Full Name:<span><strong>   Nicole Linebach</strong></span></p></span>
+                              </v-col>
+
+                              <v-col cols="4">
+                                <span class="text-right custome_class"><p>SS#:<span><strong>096745</strong></span></p></span>
+                              </v-col>
+
+                          </v-row>
+                        </div>
+                    </v-row>
+                      <v-container>
+                        <v-row>
+                                <v-col>
+                                    <v-form v-model="valid">
+                                       <v-row>
+                                          <v-col cols="12" sm="6" class="pr-7">
+                                            <v-row>
+                                              <v-col
+                                                 cols="12"
+                                                 md="3" class="pt-0 pb-0"
+                                                 >
+                                                 <div class="user-profile">
+                                                 <v-img
+                                                    :src="require('../assets/user.png')"
+                                                    contain
+                                                    width="150px"
+                                                    class="img-class"
+                                                    >
+                                                 </v-img>
+                                                 <!-- <v-img
+                                                    :src="require('../assets/pencil.png')"
+                                                    contain
+                                                    class="pencil-icon"
+                                                    >
+                                                 </v-img> -->
+                                               </div>
+                                              </v-col>
+                                              <v-col
+                                                 cols="12"
+                                                 md="9" class="pt-0 pb-0"
+                                                 >
+                                                 <v-text-field
+                                                    v-model="david"
+                                                    label="David"
+                                                    required
+                                                    ></v-text-field>
+                                                    <v-text-field
+                                                    v-model="Constructor"
+                                                    label="Constructor"
+                                                    required
+                                                    ></v-text-field>
+                                              </v-col>
+                                              <!-- <v-col cols="12">
+                                                <div class="ac-check-box">
+                                                  <ul>
+                                                    <li><v-checkbox v-model="checkbox1" :label="`Opt Out Snail Mail`"></v-checkbox></li>
+                                                    <li><v-checkbox v-model="checkbox2" :label="`Opt Out Email`"></v-checkbox></li>
+                                                    <li><v-checkbox v-model="checkbox3" :label="`Opt Out Text:`"></v-checkbox></li>
+                                                  </ul>
+                                                  
+                                                  </div>
+                                              </v-col> -->
+                                            </v-row>
+                                          </v-col>
+
+                                          <v-col cols="12" sm="6" class="pl-7">
+                                            <v-row>
+                                              <v-col
+                                                 cols="12" md="6" class="pt-0 pb-0"
+                                                 >
+                                                 <v-text-field
+                                                 label="11:00 Am"
+                                                    required
+                                                    ></v-text-field>
+                                              </v-col>
+                                              <v-col
+                                                 cols="12"
+                                                 md="6" class="pt-0 pb-0 phone-check"
+                                                 >
+                                                 <v-text-field
+                                                    v-model="phone1"
+                                                    label="12:00 Pm"
+                                                    required
+                                                    ></v-text-field>
+                                              </v-col>
+
+                                              <v-col
+                                                 cols="12"
+                                                 md="6" class="pt-0 pb-0"
+                                                 >
+                                                    <v-text-field
+                                                    v-model="phone1"
+                                                    label="8:00 Hours"
+                                                    required
+                                                    ></v-text-field>
+                                              </v-col>
+
+                                              <v-col
+                                                 cols="12"
+                                                 md="6" class="pt-0 pb-0"
+                                                 >
+                                                    <v-select
+                                                    :items="headers"
+                                                    label="PTO"
+                                                  ></v-select>
+                                              </v-col>
+                                             
+                                            </v-row>
+                                          </v-col>
+                                       </v-row>
+                                     </v-form>
+                                </v-col>
+                            </v-row>
+                      </v-container>
                 </div>
+                <!--end Time Off-->
                
             </v-col>
         </v-row>
@@ -387,34 +623,155 @@
            { text: 'Current', value: 'Current' },
            { text: 'Comments', value: 'Comments' },
          ],
+
+         headers_new: [
+           {
+             text: 'Activity Type',
+             value: 'ActivityType',
+           },
+           { text: 'Scheduled Date', value: 'ScheduledDate' },
+           { text: 'Completed Date', value: 'CompletedDate' },
+           { text: 'Entered By', value: 'EnteredBy' },
+           { text: 'Created', value: 'Created' },
+           { text: 'Comments', value: 'Comments' },
+         ],
+
          desserts: [
            {
              EffectiveDate: 'Effective Date',
              Comp: '$16.25',
              PerHourWeek: 'Per Hour',
-             Current: 'Kansas City',
-             Comments: 'Promoted to Foreman',
+             Current: '',
+             Comments: '',
            },
            {
              EffectiveDate: '1/1/2020',
              Comp: '$16.25',
              PerHourWeek: 'Per Hour',
-             Current: 'Overland Park',
+             Current: '',
              Comments: 'Promoted to Foreman',
            },
            {
              EffectiveDate: '06/12/2020',
              Comp: '$16.25',
              PerHourWeek: 'Per Hour',
-             Current: 'Olathe',
-             Comments: 'Promoted to Foreman',
+             Current: '',
+             Comments: '90 Day promotion',
            },
            {
              EffectiveDate: '06/12/2020',
              Comp: '$16.25',
              PerHourWeek: 'Per Hour',
-             Current: 'Blue Springs',
-             Comments: 'Promoted to Foreman',
+             Current: '',
+             Comments: 'New Hire',
+           },
+         ],
+
+
+         desserts_new: [
+           {
+             ActivityType: '',
+             ScheduledDate: '',
+             CompletedDate:'',
+             EnteredBy: '',
+             Created:'',
+             Comments: '',
+           },
+           {
+             ActivityType: 'Call1',
+             ScheduledDate: '06/12/2020',
+             CompletedDate: '06/12/2020',
+             EnteredBy: 'Curt',
+             Created:'9/6/20',
+             Comments: 'Lorem ipsum dolor sit amert',
+           },
+           {
+             ActivityType: 'Stanley',
+             ScheduledDate: '06/12/2020',
+             CompletedDate: '06/12/2020',
+             EnteredBy: 'Curt',
+             Created:'9/6/20',
+             Comments: 'Lorem ipsum dolor sit amert',
+           },
+           {
+             ActivityType: 'Loveall',
+             ScheduledDate: '06/12/2020',
+             CompletedDate: '06/12/2020',
+             EnteredBy: 'Curt',
+             Created:'9/6/20',
+             Comments: 'Lorem ipsum dolor sit amert',
+           },
+           {
+             ActivityType: 'Stanley',
+             ScheduledDate: '06/12/2020',
+             CompletedDate: '06/12/2020',
+             EnteredBy: 'Curt',
+             Created:'9/6/20',
+             Comments: 'Lorem ipsum dolor sit amert',
+           },
+           {
+             ActivityType: 'Call1',
+             ScheduledDate: '06/12/2020',
+             CompletedDate: '06/12/2020',
+             EnteredBy: 'Curt',
+             Created:'9/6/20',
+             Comments: 'Lorem ipsum dolor sit amert',
+           },
+           {
+             ActivityType: 'Loveall',
+             ScheduledDate: '06/12/2020',
+             CompletedDate: '06/12/2020',
+             EnteredBy: 'Curt',
+             Created:'9/6/20',
+             Comments: 'Lorem ipsum dolor sit amert',
+           },
+           {
+             ActivityType: 'Stanley',
+             ScheduledDate: '06/12/2020',
+             CompletedDate: '06/12/2020',
+             EnteredBy: 'Curt',
+             Created:'9/6/20',
+             Comments: 'Lorem ipsum dolor sit amert',
+           },
+           {
+             ActivityType: 'Call1',
+             ScheduledDate: '06/12/2020',
+             CompletedDate: '06/12/2020',
+             EnteredBy: 'Curt',
+             Created:'9/6/20',
+             Comments: 'Lorem ipsum dolor sit amert',
+           },
+           {
+             ActivityType: 'Loveallss',
+             ScheduledDate: '06/12/2020',
+             CompletedDate: '06/12/2020',
+             EnteredBy: 'Curt',
+             Created:'9/6/20',
+             Comments: 'Lorem ipsum dolor sit amert',
+           },
+           {
+             ActivityType: 'Stanley',
+             ScheduledDate: '06/12/2020',
+             CompletedDate: '06/12/2020',
+             EnteredBy: 'Curt',
+             Created:'9/6/20',
+             Comments: 'Lorem ipsum dolor sit amert',
+           },
+           {
+             ActivityType: 'Call1',
+             ScheduledDate: '06/12/2020',
+             CompletedDate: '06/12/2020',
+             EnteredBy: 'Curt',
+             Created:'9/6/20',
+             Comments: 'Lorem ipsum dolor sit amert',
+           },
+           {
+             ActivityType: 'Stanley',
+             ScheduledDate: '06/12/2020',
+             CompletedDate: '06/12/2020',
+             EnteredBy: 'Curt',
+             Created:'9/6/20',
+             Comments: 'Lorem ipsum dolor sit amert',
            },
          ],
          current_step: '1',
@@ -426,11 +783,7 @@
       {
         this.current_step = id
       },
-      customerDetail(value)
-      {
-        console.log(value.FirstName) // Get customer firstname
-        this.$router.push('/CustomerDetails')
-      }
+      
      }
    }
 </script>
@@ -445,6 +798,23 @@
    font-size: 25px;
    line-height: 37px;
    color: #000000;
+}
+.emp_main_nav_bar
+{
+  margin-left: -17%;
+}
+
+.custome_class
+{
+  line-height: 4px;
+}
+
+.main_row_employeemain
+{
+  background: #F3F3F3;
+  height: 50px;
+  width: 100%;
+border-radius: 4px;
 }
 .customer-search-wrap .col {
    padding-top: 0 !important;
@@ -466,6 +836,21 @@
     font-size: 14px !important;
     height: 50px !important;
     padding: 0px 30px !important;
+}
+
+.text_nickname_css
+{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 25px;
+  color: #7E8594;
+}
+
+.ans_css
+{
+  color: black;
 }
 .customer-search-table .v-data-table table td {
     border: none !important;
@@ -546,6 +931,94 @@ thead.v-data-table-header tr th:last-child {
 .user-bio {
     margin-top: 100px;
 }
+
+.v-image .v-responsive .img-class .theme--light
+  {
+    height: 0px!important;
+    width: 0px !important;
+  }
+
+.pencil-icon
+{
+  margin-bottom: 0px;
+}
+
+.customer-details-wrap
+{
+  margin-top: 0px;
+}
+
+/*.v-responsive__sizer
+{
+  padding-bottom: 7% !important;
+}
+*/
+
+.System_admin_text_division
+{
+  margin-left: -12px;
+    font-family: Poppins;
+    font-style: normal;
+    font-size: 25px;
+    color: #000000;
+    font-weight: 500;
+}
+.header-add-division {
+    max-width: 140px;
+}
+.header-add-division a {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    background: #20E0A5;
+    box-shadow: 0px 4px 10px rgba(1, 87, 160, 0.25);
+    color: #fff !important;
+    padding: 12px 35px;
+    border-radius: 60px;
+}
+.header-add-division
+{
+  text-align: right;
+    margin-left: 50%;
+}
+.division_bar
+{
+  padding-top: 55px;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.v-data-table
+{
+  width: 100%;
+}
+
+/*.v-application--is-ltr .offset-md-1
+{
+  margin-left: 0px !important;
+}*/
+.table_border_css_division
+{
+    border: 1px solid rgba(196, 196, 196, 0.37);
+    border-radius: 4px;
+    height: 50px;
+}
+.main_header_css
+{
+  padding-left: 8%;
+}
+.btn_css
+{
+      padding-top: 74px;
+    text-align: right;
+    margin-left: 40%;
+}
+.border_Css
+{
+  padding-top: 3%;
+  border-bottom: 1px solid rgba(126, 133, 148, 0.8);;
+}
+
 .v-data-table > .v-data-table__wrapper > table > tbody > tr > td, .v-data-table > .v-data-table__wrapper > table > thead > tr > td, .v-data-table > .v-data-table__wrapper > table > tfoot > tr > td{
     font-size: 13px;
     padding-right: 15px !important;
@@ -590,5 +1063,34 @@ thead.v-data-table-header tr th:last-child {
     display: block !important;
     border: 1px solid  #C4C4C4;
 }
+  .text_nickname_css
+  {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 587px) 
+{
+    .user-profile
+    {
+      height: 100px;
+      width: 100px;
+    }
+    .ss_Css
+    {
+      margin-left: 30px;
+    }
+    .custome_class
+    {
+      line-height: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) 
+{
+  .emp_main_nav_bar
+  {
+    margin-left: 0px !important; 
+  }
 }
 </style>

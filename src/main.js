@@ -34,7 +34,10 @@ import ForgotPassword from './components/ForgotPassword';
 import Division from './components/Division';
 import TeamMember from './components/TeamMember';
 import EmployeeMain from './components/EmployeeMain';
-
+import TeamTitle from './components/TeamTitle';
+import TraningEventCode from './components/TraningEventCode';
+import TeamActivity from './components/TeamActivity';
+import User from './components/User';
 
 
 const routes = [
@@ -154,7 +157,22 @@ const routes = [
 		path: '/EmployeeMain',
 		component : EmployeeMain
 	},
-
+	{
+		path: '/TeamTitle',
+		component : TeamTitle
+	},
+	{
+		path: '/TraningEventCode',
+		component : TraningEventCode
+	},
+	{
+		path: '/TeamActivity',
+		component : TeamActivity
+	},
+	{
+		path: '/User',
+		component : User
+	},
 ];
 const router = new VueRouter({
 	routes

@@ -1,14 +1,14 @@
 <template>
    <v-container fluid>
       <v-row class="sc-title mt-7">
-         <v-col cols="10" class="offset-md-1">
+         <v-col cols="10" class="offset-1">
             <div>
                <h1>Team Members</h1>
             </div>
          </v-col>
       </v-row>
       <v-row class="customer-search-wrap pt-5 pb-5">
-         <v-col cols="10" md="4" class="pt-0 pb-0 offset-md-1">
+         <v-col cols="10" md="4" class="pt-0 pb-0 offset-1">
             <v-text-field
                label="Search"
                autocomplete="off"
@@ -16,14 +16,17 @@
                append-icon="mdi-magnify"
                ></v-text-field>
          </v-col>
+         <v-col cols="6" class="d-flex top-option" style="justify-content: space-between;">
          <v-radio-group v-model="row" row>
-      <v-radio label="Active Only" value="radio-1"></v-radio>
-      <v-radio label="All" value="radio-2"></v-radio>
-    </v-radio-group>
-         <div class="header-add" style="margin-left: 25%;padding-top: 22px;">
+            <v-radio label="Active Only" value="radio-1"></v-radio>
+            <v-radio label="All" value="radio-2"></v-radio>
+          </v-radio-group>
+
+         <div class="header-add">
             <a href="#/"><i class="fa fa-plus" aria-hidden="true"></i><span>Add</span></a>
          </div>
-         <v-col cols="10" class="customer-search-table offset-md-1">
+       </v-col>
+         <v-col cols="10" class="customer-search-table offset-1">
             <v-data-table
                :headers="headers"
                :items="desserts"
@@ -208,6 +211,10 @@
    padding-top: 0 !important;
    padding-bottom: 0 !important;
 }
+.header-add
+{
+   padding-top: 22px;
+}
 .sc-title h1 {
    font-family: Poppins;
    font-weight: 500;
@@ -322,6 +329,14 @@ thead.v-data-table-header tr th:last-child {
 {
   margin-left: 5% !important;
 }
+@media only screen and (max-width: 959px) {
+.top-option {
+    width: 100%;
+    justify-content: center !important;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+}
 @media only screen and (max-width: 599px) {
 .v-application .sc-title {
     margin-top: 20px !important;
@@ -355,6 +370,30 @@ thead.v-data-table-header tr th:last-child {
     margin-bottom: 20px;
     display: block !important;
     border: 1px solid  #C4C4C4;
+}
+  .header-add
+  {
+    margin-left: 0px !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+.v-application .d-flex.top-option {
+    /* display: block !important; */
+    flex-wrap: wrap !important;
+}
+
+.v-application .d-flex.top-option .v-input {
+    width: 100%;
+    text-align: center;
+}
+
+.v-application .d-flex.top-option .v-input .v-input--radio-group__input {
+    justify-content: center;
+}
+
+.top-option .header-add {
+    padding-top: 0;
+    margin-bottom: 30px;
 }
 }
 </style>

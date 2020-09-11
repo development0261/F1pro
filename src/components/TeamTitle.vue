@@ -3,7 +3,7 @@
       <v-row>
 
          <v-col cols="6">
-               <h1 class="System_admin_text_division">Division</h1>
+               <h1 class="System_admin_text_division">Team Title</h1>
          </v-col>
 
          <v-col cols="1"></v-col>
@@ -19,10 +19,10 @@
 
      <v-row class="main_bar">
           <v-col cols="3" class="md-3" style="line-height: 35px;">
-            <span >Division</span>
+            <span >Key</span>
           </v-col>
           <v-col cols="9" class="md-3" style="line-height: 35px;">
-            <span>Div Description</span>
+            <span>Team Titles</span>
           </v-col>
       </v-row> 
 
@@ -45,32 +45,58 @@
       <br>
       <v-row class="customer-search-wrap">
          <v-col cols="3" class="table_border_css_division">
-           <span class="text-css">FRWP</span>
+           <span class="text-css">100</span>
          </v-col>
-         <v-col cols="5" class="table_border_css_left"><span class="text-css">Foundation Repair / Waterproofing</span></v-col>
-
-         <v-col cols="4" class="table_border_css_left"><span class="text-css"><strong>DivisionsMaster</strong></span></v-col>
+         <v-col cols="9" class="table_border_css_left"><span class="text-css">Foreman</span></v-col>
       </v-row>
 
       <v-row class="customer-search-wrap">
          <v-col cols="3" class="table_border_css_division">
-           <span class="text-css">CN</span>
+           <span class="text-css">110</span>
          </v-col>
-         <v-col cols="9" class="table_border_css_left"><span class="text-css">Concrete</span></v-col>
+         <v-col cols="9" class="table_border_css_left"><span class="text-css">Laborer</span></v-col>
       </v-row>
 
       <v-row class="customer-search-wrap">
          <v-col cols="3" class="table_border_css_division">
-           <span class="text-css">MJ</span>
+           <span class="text-css">120</span>
          </v-col>
-         <v-col cols="9" class="table_border_css_left"><span class="text-css">Mudjacking</span></v-col>
+         <v-col cols="9" class="table_border_css_left"><span class="text-css">Apprentice</span></v-col>
       </v-row>
 
       <v-row class="customer-search-wrap">
          <v-col cols="3" class="table_border_css_division">
-           <span class="text-css">HS</span>
+           <span class="text-css">130</span>
          </v-col>
-         <v-col cols="9" class="table_border_css_left"><span class="text-css">Hardscapes</span></v-col>
+         <v-col cols="9" class="table_border_css_left"><span class="text-css">Lead</span></v-col>
+      </v-row>
+
+      <v-row class="customer-search-wrap">
+         <v-col cols="3" class="table_border_css_division">
+           <span class="text-css">140</span>
+         </v-col>
+         <v-col cols="9" class="table_border_css_left"><span class="text-css">Driver</span></v-col>
+      </v-row>
+
+      <v-row class="customer-search-wrap">
+         <v-col cols="3" class="table_border_css_division">
+           <span class="text-css">150</span>
+         </v-col>
+         <v-col cols="9" class="table_border_css_left"><span class="text-css">Evaluator</span></v-col>
+      </v-row>
+
+      <v-row class="customer-search-wrap">
+         <v-col cols="3" class="table_border_css_division">
+           <span class="text-css">160</span>
+         </v-col>
+         <v-col cols="9" class="table_border_css_left"><span class="text-css">Office Team</span></v-col>
+      </v-row>
+
+      <v-row class="customer-search-wrap">
+         <v-col cols="3" class="table_border_css_division">
+           <span class="text-css">170</span>
+         </v-col>
+         <v-col cols="9" class="table_border_css_left"><span class="text-css">Other (Provider comments)</span></v-col>
       </v-row>
 
       <v-row class="btn_css">
