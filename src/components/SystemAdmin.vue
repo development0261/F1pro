@@ -6,14 +6,7 @@
                <h1 class="System_admin_text">System Admin</h1>
             </div>
          </v-col>
-
-         <v-col cols="6">
-            <div>
-
-               <h1 class="text-right System_admin_text">1601</h1>
-
-            </div>
-         </v-col>
+         <v-col cols="6"></v-col>
       </v-row>
 
       <v-row class="row">
@@ -26,14 +19,14 @@
           <v-col col="6" class="text-css main_header_css_left"><span style="margin-left: -17px;">File name</span></v-col>
       </v-row>
 
-
       <v-row class="customer-search-wrap">
          <v-col cols="5" class="table_border_css">
            <a href="#/Division" class="text-color-css"><span class="text-css">Divisions</span></a>
-
          </v-col>
          <v-col cols="1"></v-col>
-         <v-col cols="6" class="table_border_css_left"><span class="text-css">Users</span></v-col>
+         <v-col cols="6" class="table_border_css_left">
+            <a href="#/User" class="text-color-css"><span class="text-css">Users</span></a>
+          </v-col>
       </v-row>
 
       <v-row class="customer-search-wrap">
@@ -263,7 +256,7 @@
 
       <v-row class="customer-search-wrap">
          <v-col cols="5" class="table_border_css">
-           <span class="text-css">Team Activity</span>
+           <a href="#/TeamActivity" class="text-color-css"><span class="text-css">Team Activity</span></a>
          </v-col>
          <v-col cols="1"></v-col>
          <v-col cols="6"></v-col>
@@ -271,7 +264,7 @@
 
       <v-row class="customer-search-wrap">
          <v-col cols="5" class="table_border_css">
-           <span class="text-css">Team Titles</span>
+           <a href="#/TeamTitle" class="text-color-css"><span class="text-css">Team Titles</span></a>
          </v-col>
          <v-col cols="1"></v-col>
          <v-col cols="6"></v-col>
@@ -279,7 +272,7 @@
 
       <v-row class="customer-search-wrap">
          <v-col cols="5" class="table_border_css">
-           <span class="text-css">TrainingEventCodes</span>
+           <a href="#/TraningEventCode" class="text-color-css"><span class="text-css">TrainingEventCodes</span></a>
          </v-col>
          <v-col cols="1"></v-col>
          <v-col cols="6"></v-col>
